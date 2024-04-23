@@ -5,6 +5,8 @@
  */
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/backlight.h>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -22,7 +24,7 @@
 &kp TAB           &kp Q  &kp W  &kp E     &kp R  &kp T            &kp Y      &kp U         &kp I      &kp O    &mt PRINTSCREEN P  &kp BSLH
 &mt LCTRL ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G            &kp H      &kp J         &kp K      &kp L    &kp SEMI           &kp SQT
 &kp LSHFT         &kp Z  &kp X  &kp C     &kp V  &kp B            &kp N      &mt K_MUTE M  &kp COMMA  &kp DOT  &kp FSLH           &mt RSHIFT ENTER
-                                &kp LGUI  &mo 0  &kp BACKSPACE    &kp SPACE  &mo 0         &kp RALT
+                                &kp LGUI  &mo 1  &kp BACKSPACE    &kp SPACE  &mo 2         &kp RALT
             >;
         };
 
@@ -31,7 +33,7 @@
 &trans  &trans  &kp LEFT_BRACKET      &trans  &kp RIGHT_BRACKET      &trans    &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_PLUS  &kp RIGHT_ALT
 &trans  &trans  &kp LEFT_PARENTHESIS  &trans  &kp RIGHT_PARENTHESIS  &trans    &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp MINUS    &kp COMMA
 &trans  &trans  &trans                &trans  &trans                 &trans    &kp KP_DOT       &kp N1  &kp N2  &kp N3  &kp EQUAL    &trans
-                                      &trans  &trans                 &trans    &trans           &mo 3   &kp N0
+                                      &trans  &trans                 &trans    &trans           &tog 3  &kp N0
             >;
         };
 
@@ -40,16 +42,16 @@
 &trans  &trans  &trans    &kp UP    &trans     &kp PG_UP        &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_DOWN    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &kp HOME  &trans    &kp END    &trans           &trans  &trans  &trans  &trans  &trans  &trans
-                          &trans    &mo 3      &kp DEL          &trans  &trans  &trans
+                          &trans    &tog 3     &kp DEL          &trans  &trans  &trans
             >;
         };
 
         adjust {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&kp C_RESET  &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bl BL_TOG      &trans  &trans  &trans  &trans  &trans  &trans
+&to 0        &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &bl BL_CYCLE    &trans  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4    &trans  &trans  &trans  &trans  &trans  &trans
+                                                 &trans                &trans                &trans          &trans  &trans  &trans
             >;
         };
     };
