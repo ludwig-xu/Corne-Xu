@@ -10,6 +10,24 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        DF2grave {
+            bindings = <&kp GRAVE>;
+            key-positions = <15 16>;
+        };
+    };
+
+    behaviors {
+        shift_cap: shift_cap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_CAP";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
