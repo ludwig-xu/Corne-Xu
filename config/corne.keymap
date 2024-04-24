@@ -13,16 +13,17 @@
     combos {
         compatible = "zmk,combos";
 
-        DF2grave {
+        combo_grave {
             bindings = <&kp GRAVE>;
             key-positions = <15 16>;
+            layers = <0>;
         };
     };
 
     behaviors {
-        shift_cap: shift_cap {
+        td0: td0 {
             compatible = "zmk,behavior-tap-dance";
-            label = "SHIFT_CAP";
+            label = "TD0";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
@@ -41,7 +42,7 @@
             bindings = <
 &kp TAB           &kp Q  &kp W  &kp E     &kp R  &kp T            &kp Y      &kp U         &kp I      &kp O    &mt PRINTSCREEN P  &kp BSLH
 &mt LCTRL ESCAPE  &kp A  &kp S  &kp D     &kp F  &kp G            &kp H      &kp J         &kp K      &kp L    &kp SEMI           &kp SQT
-&shift_cap         &kp Z  &kp X  &kp C     &kp V  &kp B            &kp N      &mt K_MUTE M  &kp COMMA  &kp DOT  &kp FSLH           &mt RSHIFT ENTER
+&td0              &kp Z  &kp X  &kp C     &kp V  &kp B            &kp N      &mt K_MUTE M  &kp COMMA  &kp DOT  &kp FSLH           &mt RSHIFT ENTER
                                 &kp LGUI  &mo 1  &kp BACKSPACE    &kp SPACE  &mo 2         &kp RALT
             >;
         };
@@ -66,10 +67,10 @@
 
         adjust {
             bindings = <
-&kp C_RESET  &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bl BL_TOG      &trans  &kp F7  &kp F8  &kp F9  &trans  &trans
-&to 0        &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &bl BL_CYCLE    &trans  &kp F4  &kp F5  &kp F6  &trans  &trans
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4    &trans  &kp F1  &kp F2  &kp F3  &trans  &trans
-                                                 &trans                &trans                &trans          &trans  &trans  &trans
+&sys_reset  &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bl BL_TOG      &trans  &kp F7  &kp F8  &kp F9  &trans  &trans
+&to 0       &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &bl BL_CYCLE    &trans  &kp F4  &kp F5  &kp F6  &trans  &trans
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4    &trans  &kp F1  &kp F2  &kp F3  &trans  &trans
+                                                &trans                &trans                &trans          &trans  &trans  &trans
             >;
         };
     };
