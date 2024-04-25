@@ -49,10 +49,10 @@
 
         num {
             bindings = <
-&trans  &trans  &kp LEFT_BRACKET      &trans  &kp RIGHT_BRACKET      &trans    &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_PLUS  &kp RIGHT_ALT
-&trans  &trans  &kp LEFT_PARENTHESIS  &trans  &kp RIGHT_PARENTHESIS  &trans    &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp MINUS    &kp COMMA
-&trans  &trans  &trans                &trans  &trans                 &trans    &kp KP_DOT       &kp N1  &kp N2  &kp N3  &kp EQUAL    &trans
-                                      &trans  &trans                 &trans    &trans           &tog 3  &kp N0
+&sys_reset      &trans        &kp LEFT_BRACKET      &trans  &kp RIGHT_BRACKET      &trans    &kp KP_MULTIPLY  &kp N7  &kp N8  &kp N9  &kp KP_PLUS  &kp RIGHT_ALT
+&trans          &trans        &kp LEFT_PARENTHESIS  &trans  &kp RIGHT_PARENTHESIS  &trans    &kp KP_DIVIDE    &kp N4  &kp N5  &kp N6  &kp MINUS    &kp COMMA
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1          &trans  &trans                 &trans    &kp KP_DOT       &kp N1  &kp N2  &kp N3  &kp EQUAL    &trans
+                                                    &trans  &trans                 &trans    &trans           &tog 3  &kp N0
             >;
         };
 
@@ -67,10 +67,10 @@
 
         adjust {
             bindings = <
-&sys_reset  &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bl BL_TOG       &trans     &kp F7  &kp F8         &kp F9  &trans  &trans
-&to 0       &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &bl BL_CYCLE     &trans     &kp F4  &kp F5         &kp F6  &trans  &trans
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4     &trans     &kp F1  &kp F2         &kp F3  &trans  &trans
-                                                &kp LEFT_GUI          &trans                &kp BACKSPACE    &kp SPACE  &trans  &kp RIGHT_ALT
+&sys_reset      &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bl BL_TOG       &trans     &kp F7  &kp F8         &kp F9  &trans  &trans
+&to 0           &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &bl BL_CYCLE     &trans     &kp F4  &kp F5         &kp F6  &trans  &trans
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4     &trans     &kp F1  &kp F2         &kp F3  &trans  &trans
+                                                    &kp LEFT_GUI          &trans                &kp BACKSPACE    &kp SPACE  &trans  &kp RIGHT_ALT
             >;
         };
     };
