@@ -68,10 +68,10 @@
 
         nav {
             bindings = <
-&kp GRAVE  &trans  &trans    &kp UP    &trans     &trans           &trans         &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_UP      &trans         &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &kp HOME  &trans    &kp END    &kp PAGE_DOWN    &mt RA(F4) F4  &trans  &trans  &trans  &trans  &trans
-                             &trans    &mo 3      &kp DEL          &trans         &trans  &trans
+&kp GRAVE  &trans  &trans    &kp UP    &trans     &trans           &trans         &trans    &kp UP_ARROW  &trans     &trans  &trans
+&trans     &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PAGE_UP      &trans         &kp LEFT  &kp DOWN      &kp RIGHT  &trans  &trans
+&trans     &trans  &kp HOME  &trans    &kp END    &kp PAGE_DOWN    &mt RA(F4) F4  &trans    &trans        &trans     &trans  &trans
+                             &trans    &mo 3      &kp DEL          &trans         &trans    &trans
             >;
         };
 
