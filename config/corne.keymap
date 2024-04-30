@@ -72,7 +72,7 @@
 &kp GRAVE  &kp ASTERISK  &kp N7        &kp N8           &kp N9        &kp PLUS     &trans         &trans                &trans     &trans                 &trans  &trans
 &trans     &kp SLASH     &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp MINUS    &trans         &kp LEFT_BRACKET      &kp COMMA  &kp RIGHT_BRACKET      &trans  &trans
 &trans     &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &kp EQUAL    &mt RA(F4) F4  &kp LEFT_PARENTHESIS  &trans     &kp RIGHT_PARENTHESIS  &trans  &trans
-                                       &mt LEFT_GUI N0  &mo 3         &kp DEL      &trans         &trans                &trans
+                                       &mt LEFT_GUI N0  &tog 3        &kp DEL      &trans         &trans                &trans
             >;
         };
 
@@ -81,14 +81,14 @@
 &trans  &trans  &trans          &trans        &trans  &trans    &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)      &kp LG(X)     &kp LG(Z)  &trans
 &trans  &trans  &kp LEFT_SHIFT  &kp LEFT_GUI  &trans  &trans    &trans         &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
 &trans  &trans  &trans          &trans        &trans  &trans    &trans         &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-                                &trans        &trans  &trans    &trans         &mo 3      &trans
+                                &trans        &trans  &trans    &trans         &tog 3     &trans
             >;
         };
 
         adjust {
             bindings = <
 &sys_reset  &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &bl BL_TOG       &trans     &kp F7  &kp F8         &kp F9  &trans  &trans
-&trans      &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &bl BL_CYCLE     &trans     &kp F4  &kp F5         &kp F6  &trans  &bt BT_CLR_ALL
+&to 0       &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &bl BL_CYCLE     &trans     &kp F4  &kp F5         &kp F6  &trans  &bt BT_CLR_ALL
 &trans      &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4     &trans     &kp F1  &kp F2         &kp F3  &trans  &trans
                                                 &kp LEFT_GUI          &trans                &kp BACKSPACE    &kp SPACE  &trans  &kp RIGHT_ALT
             >;
