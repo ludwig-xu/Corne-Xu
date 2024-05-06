@@ -87,10 +87,10 @@
 
         adjust {
             bindings = <
-&sys_reset  &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &rgb_ug RGB_TOG    &trans     &kp F7  &kp F8         &kp F9  &trans  &trans
-&to 0       &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &rgb_ug RGB_EFF    &trans     &kp F4  &kp F5         &kp F6  &trans  &bt BT_CLR_ALL
-&trans      &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4       &trans     &kp F1  &kp F2         &kp F3  &trans  &trans
-                                                &kp LEFT_GUI          &trans                &kp BACKSPACE      &kp SPACE  &trans  &kp RIGHT_ALT
+&sys_reset  &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &rgb_ug RGB_TOG    &rgb_ug RGB_SAI  &kp F7  &kp F8         &kp F9  &rgb_ug RGB_SAD  &rgb_ug RGB_SPI
+&to 0       &trans        &kp C_MUTE            &kp C_VOL_DN          &kp C_VOL_UP          &rgb_ug RGB_EFF    &rgb_ug RGB_BRI  &kp F4  &kp F5         &kp F6  &rgb_ug RGB_BRD  &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2          &bt BT_SEL 3          &bt BT_SEL 4       &rgb_ug RGB_HUI  &kp F1  &kp F2         &kp F3  &rgb_ug RGB_HUD  &rgb_ug RGB_SPD
+                                                &kp LEFT_GUI          &trans                &kp BACKSPACE      &kp SPACE        &trans  &kp RIGHT_ALT
             >;
         };
     };
