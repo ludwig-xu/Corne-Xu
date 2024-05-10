@@ -82,10 +82,10 @@
 
         media {
             bindings = <
-&sys_reset  &bootloader   &kp C_AL_SCREENSAVER  &kp C_BRIGHTNESS_DEC        &kp C_BRIGHTNESS_INC        &rgb_ug RGB_TOG    &rgb_ug RGB_BRI  &kp F7  &kp F8  &kp F9  &trans  &bt BT_CLR_ALL
-&to 0       &trans        &mt LEFT_ALT C_MUTE   &mt LEFT_GUI C_VOLUME_DOWN  &mt LEFT_SHIFT C_VOLUME_UP  &rgb_ug RGB_EFF    &rgb_ug RGB_BRD  &kp F4  &kp F5  &kp F6  &trans  &trans
-&trans      &bt BT_SEL 0  &bt BT_SEL 1          &bt BT_SEL 2                &bt BT_SEL 3                &bt BT_SEL 4       &rgb_ug RGB_HUI  &kp F1  &kp F2  &kp F3  &trans  &trans
-                                                &trans                      &trans                      &trans             &trans           &trans  &trans
+&sys_reset  &bootloader  &kp F7  &kp F8  &kp F9  &rgb_ug RGB_TOG    &trans  &kp C_AL_SCREENSAVER       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC       &trans            &bt BT_CLR_ALL
+&trans      &trans       &kp F4  &kp F5  &kp F6  &rgb_ug RGB_EFF    &trans  &mt LEFT_SHIFT C_PREVIOUS  &mt LEFT_GUI C_STOP   &mt LEFT_ALT C_PLAY_PAUSE  &mt LCTRL C_NEXT  &bt BT_SEL 0
+&trans      &trans       &kp F1  &kp F2  &kp F3  &rgb_ug RGB_HUI    &trans  &kp C_MUTE                 &kp C_VOLUME_DOWN     &kp C_VOLUME_UP            &trans            &bt BT_SEL 1
+                                 &trans  &trans  &trans             &trans  &trans                     &trans
             >;
         };
     };
