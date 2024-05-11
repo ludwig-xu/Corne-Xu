@@ -33,14 +33,14 @@
             bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
 
-        mtt: mtt {
+        mth: mth {
             compatible = "zmk,behavior-hold-tap";
-            label = "MTT";
+            label = "MTH";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <500>;
-            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
         };
 
         td1: td1 {
@@ -64,7 +64,7 @@
             bindings = <
 &kp TAB                  &kp Q  &kp W  &kp E     &kp R      &kp T            &kp Y      &kp U         &kp I         &kp O    &mt PRINTSCREEN P  &kp BSLH
 &mt LEFT_CONTROL ESCAPE  &kp A  &kp S  &kp D     &kp F      &kp G            &kp H      &kp J         &kp K         &kp L    &kp SEMI           &kp SQT
-&td0                     &kp Z  &kp X  &kp C     &kp V      &kp B            &kp N      &mt C_MUTE M  &kp COMMA     &kp DOT  &kp FSLH           &mt RSHIFT ENTER
+&td0                     &kp Z  &kp X  &kp C     &kp V      &kp B            &kp N      &mt C_MUTE M  &kp COMMA     &kp DOT  &kp FSLH           &mth LEFT_SHIFT ENTER
                                        &kp LGUI  &lt 2 DEL  &kp BACKSPACE    &kp SPACE  &lt 1 ENTER   &kp LEFT_ALT
             >;
         };
