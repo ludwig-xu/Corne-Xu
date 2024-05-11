@@ -42,6 +42,13 @@
             tapping-term-ms = <500>;
             flavor = "tap-preferred";
         };
+
+        td1: td1 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD1";
+            #binding-cells = <0>;
+            bindings = <&lt 3 ENTER>, <&to 3>;
+        };
     };
 
     keymap {
@@ -73,17 +80,17 @@
 
         nav {
             bindings = <
-&trans  &trans     &trans        &trans        &trans          &trans    &kp LS(LG(Z))  &kp LG(V)    &kp LG(C)      &kp LG(X)     &kp LG(Z)  &trans
-&trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans    &trans         &kp LEFT     &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &kp LEFT   &kp DOWN      &kp UP        &kp RIGHT       &trans    &trans         &kp HOME     &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-                                 &trans        &trans          &trans    &trans         &lt 3 ENTER  &trans
+&trans  &trans     &trans        &trans        &trans          &trans    &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)      &kp LG(X)     &kp LG(Z)  &trans
+&trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans    &trans         &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
+&trans  &kp LEFT   &kp DOWN      &kp UP        &kp RIGHT       &trans    &trans         &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+                                 &trans        &trans          &trans    &trans         &td1       &trans
             >;
         };
 
         media {
             bindings = <
 &sys_reset  &bootloader  &kp F7  &kp F8  &kp F9  &rgb_ug RGB_TOG    &trans  &kp C_AL_SCREENSAVER       &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC       &trans            &bt BT_CLR_ALL
-&trans      &trans       &kp F4  &kp F5  &kp F6  &rgb_ug RGB_EFF    &trans  &mt LEFT_SHIFT C_PREVIOUS  &mt LEFT_GUI C_STOP   &mt LEFT_ALT C_PLAY_PAUSE  &mt LCTRL C_NEXT  &bt BT_SEL 0
+&to 0       &trans       &kp F4  &kp F5  &kp F6  &rgb_ug RGB_EFF    &trans  &mt LEFT_SHIFT C_PREVIOUS  &mt LEFT_GUI C_STOP   &mt LEFT_ALT C_PLAY_PAUSE  &mt LCTRL C_NEXT  &bt BT_SEL 0
 &trans      &trans       &kp F1  &kp F2  &kp F3  &rgb_ug RGB_HUI    &trans  &kp C_MUTE                 &kp C_VOLUME_DOWN     &kp C_VOLUME_UP            &trans            &bt BT_SEL 1
                                  &trans  &trans  &trans             &trans  &trans                     &trans
             >;
