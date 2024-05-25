@@ -16,15 +16,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_grave {
-            bindings = <&kp GRAVE>;
-            key-positions = <15 16>;
-            layers = <0>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         td0: td0 {
@@ -32,23 +24,6 @@
             label = "TD0";
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
-        };
-
-        mth: mth {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MTH";
-            bindings = <&kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "hold-preferred";
-        };
-
-        td1: td1 {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD1";
-            #binding-cells = <0>;
-            bindings = <&lt 3 ENTER>, <&to 3>;
         };
     };
 
@@ -63,28 +38,28 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB                  &kp Q  &kp W  &kp E     &kp R      &kp T            &kp Y      &kp U         &kp I         &kp O    &mt PRINTSCREEN P  &kp BSLH
-&mt LEFT_CONTROL ESCAPE  &kp A  &kp S  &kp D     &kp F      &kp G            &kp H      &kp J         &kp K         &kp L    &kp SEMI           &kp SQT
-&td0                     &kp Z  &kp X  &kp C     &kp V      &kp B            &kp N      &mt C_MUTE M  &kp COMMA     &kp DOT  &kp FSLH           &mth LEFT_SHIFT ENTER
-                                       &kp LGUI  &lt 2 DEL  &kp BACKSPACE    &kp SPACE  &lt 1 ENTER   &kp LEFT_ALT
+&kp TAB                  &kp Q  &kp W  &kp E     &kp R      &kp T            &kp Y        &kp U        &kp I         &kp O    &kp P     &kp BSLH
+&mt LEFT_CONTROL ESCAPE  &kp A  &kp S  &kp D     &kp F      &kp G            &kp H        &kp J        &kp K         &kp L    &kp SEMI  &kp SQT
+&td0                     &kp Z  &kp X  &kp C     &kp V      &kp B            &kp N        &kp M        &kp COMMA     &kp DOT  &kp FSLH  &kp LEFT_SHIFT
+                                       &kp LGUI  &lt 2 DEL  &kp BACKSPACE    &lt 3 SPACE  &lt 1 ENTER  &kp LEFT_ALT
             >;
         };
 
         num {
             bindings = <
-&kp GRAVE  &kp ASTERISK  &kp N7        &kp N8           &kp N9        &kp PLUS     &trans         &trans                       &trans              &trans                      &trans     &trans
-&trans     &kp SLASH     &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp MINUS    &trans         &mt LEFT_SHIFT LEFT_BRACKET  &mt LEFT_GUI COMMA  &mt LEFT_ALT RIGHT_BRACKET  &kp LCTRL  &trans
-&trans     &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &kp EQUAL    &mt RA(F4) F4  &kp LEFT_PARENTHESIS         &trans              &kp RIGHT_PARENTHESIS       &trans     &trans
-                                       &mt LEFT_GUI N0  &kp DELETE    &trans       &trans         &trans                       &trans
+&kp GRAVE  &kp ASTERISK  &kp N7        &kp N8           &kp N9        &kp PLUS     &trans  &trans                &trans     &trans                 &trans  &trans
+&trans     &kp SLASH     &kp NUMBER_4  &kp N5           &kp NUMBER_6  &kp MINUS    &trans  &kp LEFT_BRACKET      &kp COMMA  &kp RIGHT_BRACKET      &trans  &trans
+&trans     &kp PERIOD    &kp NUMBER_1  &kp NUMBER_2     &kp NUMBER_3  &kp EQUAL    &trans  &kp LEFT_PARENTHESIS  &trans     &kp RIGHT_PARENTHESIS  &trans  &trans
+                                       &mt LEFT_GUI N0  &kp DELETE    &trans       &trans  &trans                &trans
             >;
         };
 
         nav {
             bindings = <
-&trans  &trans     &trans        &trans        &trans          &trans    &kp LS(LG(Z))  &kp LG(V)  &kp LG(C)      &kp LG(X)     &kp LG(Z)  &trans
+&trans  &trans     &trans        &trans        &trans          &trans    &kp LS(LC(Z))  &kp LC(V)  &kp LC(C)      &kp LC(X)     &kp LC(Z)  &trans
 &trans  &kp LCTRL  &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &trans    &trans         &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT  &trans
-&trans  &kp LEFT   &kp DOWN      &kp UP        &kp RIGHT       &trans    &trans         &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-                                 &trans        &trans          &trans    &trans         &td1       &trans
+&trans  &trans     &trans        &trans        &trans          &trans    &trans         &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+                                 &trans        &trans          &trans    &trans         &trans     &trans
             >;
         };
 
